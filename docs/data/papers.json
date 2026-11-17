@@ -1,17 +1,458 @@
 {
   "meta": {
-    "description": "日本語（J-STAGE）・英語（Oxford Academic／Project MUSE）の学術誌RSSで増やす独立論文アーカイブ。",
-    "updated_at": "2026-11-17T04:43:23+00:00",
-    "new_last_run": 0,
-    "sources_ok": 14,
-    "sources_failed": 0,
-    "last_status": "正常",
-    "source": "J-STAGE・Oxford Academic・Project MUSE 公開RSS",
-    "journals_monitored": 14,
+    "description": "日本語J-STAGE RSS・英語Oxford/Project MUSE RSSとCrossref DOI書誌（計50誌）を週次照会する論文アーカイブ。",
+    "updated_at": "2026-11-17T05:04:25+00:00",
+    "new_last_run": 18,
+    "sources_ok": 46,
+    "sources_failed": 4,
+    "last_status": "一部RSS取得失敗",
+    "source": "J-STAGE・Oxford Academic・Project MUSE RSS ／ Crossref DOI metadata",
+    "journals_monitored": 50,
+    "crossref_sources_ok": 32,
     "languages": [
       "ja",
       "en"
     ]
   },
-  "papers": []
+  "papers": [
+    {
+      "title": "Aristotelianism and Hermeticism in Renaissance Naples: Francesco Storella and the Secrets of Alchemy",
+      "url": "https://doi.org/10.1080/00026980.2025.2598098",
+      "authors": [
+        "Donato Verardi"
+      ],
+      "journal": "Ambix",
+      "published": "2026",
+      "date": "2026-1-20",
+      "doi": "10.1080/00026980.2025.2598098",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1080/00026980.2025.2598098",
+      "score": 58,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemy",
+        "hermeticism"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Digital Iconology: Classification and Association in Visual Knowledge Systems",
+      "url": "https://doi.org/10.1080/01973762.2026.2705660",
+      "authors": [
+        "Charles van den Heuvel"
+      ],
+      "journal": "Visual Resources",
+      "published": "2026",
+      "date": "2026-9-17",
+      "doi": "10.1080/01973762.2026.2705660",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1080/01973762.2026.2705660",
+      "score": 46,
+      "tags": [
+        "エンブレム・寓意・図像学"
+      ],
+      "matched_terms": [
+        "iconology"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "An ‘unholy’ alchemy: the nineteenth-century European medico-scientific encounter with opium smoking and the circulation of knowledge",
+      "url": "https://doi.org/10.1017/s0007087426102039",
+      "authors": [
+        "Matthew Perkins-McVey"
+      ],
+      "journal": "The British Journal for the History of Science",
+      "published": "2026",
+      "date": "2026-5-20",
+      "doi": "10.1017/s0007087426102039",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1017/s0007087426102039",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemy"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Writing the History of Scientific Instruments",
+      "url": "https://doi.org/10.1163/18253911-bja10211",
+      "authors": [
+        "Charlotte Bigg",
+        "Christoph Meinel",
+        "Helmuth Trischler"
+      ],
+      "journal": "Nuncius",
+      "published": "2026",
+      "date": "2026-6-1",
+      "doi": "10.1163/18253911-bja10211",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1163/18253911-bja10211",
+      "score": 46,
+      "tags": [
+        "百科展示・視覚科学"
+      ],
+      "matched_terms": [
+        "scientific instruments"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Scientific Instruments and/as Oil Spillovers",
+      "url": "https://doi.org/10.1163/18253911-bja10200",
+      "authors": [
+        "Michiel Bron",
+        "Cyrus C.M. Mody"
+      ],
+      "journal": "Nuncius",
+      "published": "2026",
+      "date": "2026-4-8",
+      "doi": "10.1163/18253911-bja10200",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1163/18253911-bja10200",
+      "score": 46,
+      "tags": [
+        "百科展示・視覚科学"
+      ],
+      "matched_terms": [
+        "scientific instruments"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Studying “Lost” Scientific Instruments",
+      "url": "https://doi.org/10.1163/18253911-bja10191",
+      "authors": [
+        "Liba Taub"
+      ],
+      "journal": "Nuncius",
+      "published": "2026",
+      "date": "2026-1-19",
+      "doi": "10.1163/18253911-bja10191",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1163/18253911-bja10191",
+      "score": 46,
+      "tags": [
+        "百科展示・視覚科学"
+      ],
+      "matched_terms": [
+        "scientific instruments"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Touching the Real in the Canon's Yeoman's Tale : Alchemy, Anecdote, and the Archives of London Goldwork",
+      "url": "https://doi.org/10.1215/10829636-12559264",
+      "authors": [
+        "Joe Stadolnik"
+      ],
+      "journal": "Journal of Medieval and Early Modern Studies",
+      "published": "2026",
+      "date": "2026-9-1",
+      "doi": "10.1215/10829636-12559264",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1215/10829636-12559264",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemy"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Early Modern Lyric Communities and Print Culture",
+      "url": "https://doi.org/10.1215/10829636-12217745",
+      "authors": [
+        "Virginia Cox"
+      ],
+      "journal": "Journal of Medieval and Early Modern Studies",
+      "published": "2026",
+      "date": "2026-1-1",
+      "doi": "10.1215/10829636-12217745",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1215/10829636-12217745",
+      "score": 46,
+      "tags": [
+        "書物・版画・メディア考古学"
+      ],
+      "matched_terms": [
+        "print culture"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "The Alchemical Feminine: Women, Gender, and Sexuality in Alchemical Images, by M.E. Warlick",
+      "url": "https://doi.org/10.1163/15700593-tat00040",
+      "authors": [
+        "Thomas Willard"
+      ],
+      "journal": "Aries: Journal for the Study of Western Esotericism",
+      "published": "2026",
+      "date": "2026-10-7",
+      "doi": "10.1163/15700593-tat00040",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1163/15700593-tat00040",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemical"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Greek Alchemy in the Fifteenth Century: The Case for the Role of Georgios-Gennadios Scholarios’ Circle",
+      "url": "https://doi.org/10.1080/00026980.2026.2748790",
+      "authors": [
+        "Flavio Bevacqua"
+      ],
+      "journal": "Ambix",
+      "published": "2026",
+      "date": "2026-11-11",
+      "doi": "10.1080/00026980.2026.2748790",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1080/00026980.2026.2748790",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemy"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "The Alchemical Feminine: Women, Gender, and Sexuality in Alchemical Images",
+      "url": "https://doi.org/10.1080/00026980.2026.2746862",
+      "authors": [
+        "Leonardo Anatrini"
+      ],
+      "journal": "Ambix",
+      "published": "2026",
+      "date": "2026-10-19",
+      "doi": "10.1080/00026980.2026.2746862",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1080/00026980.2026.2746862",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemical"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Bruce Boucher, John Soane’s Cabinet of Curiosities: Reflections on an Architect and his Curiosities",
+      "url": "https://doi.org/10.1093/jhc/fhaf022",
+      "authors": [
+        "Rachel Morris"
+      ],
+      "journal": "Journal of the History of Collections",
+      "published": "2025",
+      "date": "2025-9-24",
+      "doi": "10.1093/jhc/fhaf022",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1093/jhc/fhaf022",
+      "score": 46,
+      "tags": [
+        "驚異の部屋・蒐集の装置"
+      ],
+      "matched_terms": [
+        "cabinet of curiosities"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "The Alchemical Laboratory in Visual and Written Sources, written by Ivo Purš and Vladimír Karpenko",
+      "url": "https://doi.org/10.1163/15733823-20251352",
+      "authors": [
+        "Sarah Lang"
+      ],
+      "journal": "Early Science and Medicine",
+      "published": "2025",
+      "date": "2025-7-17",
+      "doi": "10.1163/15733823-20251352",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1163/15733823-20251352",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemical"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Physiognomy, Complexion, and Ingenuity: the Management of Talent in the Society of Jesus, 1540–1773",
+      "url": "https://doi.org/10.1163/15733823-20251335",
+      "authors": [
+        "Francisco Malta Romeiras",
+        "Luís Campos Ribeiro",
+        "Elisa Frei"
+      ],
+      "journal": "Early Science and Medicine",
+      "published": "2025",
+      "date": "2025-3-6",
+      "doi": "10.1163/15733823-20251335",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1163/15733823-20251335",
+      "score": 46,
+      "tags": [
+        "観相・解剖・蝋の身体"
+      ],
+      "matched_terms": [
+        "physiognomy"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Family Phantasmagoria: Antoine Claudet, Stereographs, and Middle-Class Dummies",
+      "url": "https://doi.org/10.1093/oxartj/kcaf001",
+      "authors": [
+        "Steve Edwards"
+      ],
+      "journal": "Oxford Art Journal",
+      "published": "2025",
+      "date": "2025-9-30",
+      "doi": "10.1093/oxartj/kcaf001",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1093/oxartj/kcaf001",
+      "score": 46,
+      "tags": [
+        "光学・錯視・幻灯"
+      ],
+      "matched_terms": [
+        "phantasmagoria"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "William Holman Hunt’s Fantastic Magic Lantern",
+      "url": "https://doi.org/10.1093/oxartj/kcaf005",
+      "authors": [
+        "Keren Rosa Hammerschlag"
+      ],
+      "journal": "Oxford Art Journal",
+      "published": "2025",
+      "date": "2025-9-30",
+      "doi": "10.1093/oxartj/kcaf005",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1093/oxartj/kcaf005",
+      "score": 46,
+      "tags": [
+        "光学・錯視・幻灯"
+      ],
+      "matched_terms": [
+        "magic lantern"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Science on a Screen: Assessing the Magic Lantern's Transnational Role in Science Communication",
+      "url": "https://doi.org/10.1484/j.cnt.5.152822",
+      "authors": [
+        "Emily Hayes",
+        "Frank Kessler"
+      ],
+      "journal": "Centaurus",
+      "published": "2025",
+      "date": "2025-1-1",
+      "doi": "10.1484/j.cnt.5.152822",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1484/j.cnt.5.152822",
+      "score": 46,
+      "tags": [
+        "光学・錯視・幻灯"
+      ],
+      "matched_terms": [
+        "magic lantern"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Reading the rebus: the reception of seventeenth-century German rebus broadsheets",
+      "url": "https://doi.org/10.1080/02666286.2024.2335851",
+      "authors": [
+        "Alisa van de Haar"
+      ],
+      "journal": "Word & Image",
+      "published": "2024",
+      "date": "2024-6-27",
+      "doi": "10.1080/02666286.2024.2335851",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1080/02666286.2024.2335851",
+      "score": 46,
+      "tags": [
+        "エンブレム・寓意・図像学"
+      ],
+      "matched_terms": [
+        "rebus"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    }
+  ]
 }
