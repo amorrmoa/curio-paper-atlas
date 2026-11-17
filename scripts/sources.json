@@ -1,0 +1,87 @@
+{
+  "description": "日本語J-STAGE 11誌・英語Oxford Academic 2誌・Project MUSEのJournal of the History of Ideas 1誌の新着論文RSSを週次照会。RSS閲覧は提供元の利用条件に従う。",
+  "journals": [
+    {
+      "code": "bigaku",
+      "name": "美学",
+      "home": "https://www.jstage.jst.go.jp/browse/bigaku/-char/ja"
+    },
+    {
+      "code": "crs",
+      "name": "文化資源学",
+      "home": "https://www.jstage.jst.go.jp/browse/crs/-char/ja"
+    },
+    {
+      "code": "hikaku",
+      "name": "比較文学",
+      "home": "https://www.jstage.jst.go.jp/browse/hikaku/-char/ja"
+    },
+    {
+      "code": "jhsj",
+      "name": "科学史研究",
+      "home": "https://www.jstage.jst.go.jp/browse/jhsj/-char/ja"
+    },
+    {
+      "code": "jsgs",
+      "name": "図学研究",
+      "home": "https://www.jstage.jst.go.jp/browse/jsgs/-char/ja"
+    },
+    {
+      "code": "jssdj",
+      "name": "デザイン学研究",
+      "home": "https://www.jstage.jst.go.jp/browse/jssdj/-char/ja"
+    },
+    {
+      "code": "jjcanth",
+      "name": "文化人類学",
+      "home": "https://www.jstage.jst.go.jp/browse/jjcanth/-char/ja"
+    },
+    {
+      "code": "rsjars",
+      "name": "宗教研究",
+      "home": "https://www.jstage.jst.go.jp/browse/rsjars/-char/ja"
+    },
+    {
+      "code": "uaesj",
+      "name": "美術教育学研究",
+      "home": "https://www.jstage.jst.go.jp/browse/uaesj/-char/ja"
+    },
+    {
+      "code": "aaej",
+      "name": "美術教育学：美術科教育学会誌",
+      "home": "https://www.jstage.jst.go.jp/browse/aaej/-char/ja"
+    },
+    {
+      "code": "jsartdesign",
+      "name": "芸術学論集",
+      "home": "https://www.jstage.jst.go.jp/browse/jsartdesign/-char/ja"
+    }
+  ],
+  "english_feeds": [
+    {
+      "id": "arthistory",
+      "name": "Art History",
+      "url": "https://academic.oup.com/rss/site_6592/4178.xml",
+      "home": "https://academic.oup.com/arthistory",
+      "language": "en",
+      "provider": "Oxford Academic"
+    },
+    {
+      "id": "jdh",
+      "name": "Journal of Design History",
+      "url": "https://academic.oup.com/rss/site_5472/3333.xml",
+      "home": "https://academic.oup.com/jdh",
+      "language": "en",
+      "provider": "Oxford Academic"
+    },
+    {
+      "id": "jhi",
+      "name": "Journal of the History of Ideas",
+      "url": "https://muse.jhu.edu/feeds/latest_articles?jid=91",
+      "home": "https://muse.jhu.edu/journal/91",
+      "language": "en",
+      "provider": "Project MUSE",
+      "note": "MUSEの雑誌別latest_articlesフィード形式とJHI journal ID 91に基づくURL。実取得はGitHub Actions初回実行で要確認。"
+    }
+  ]
+}

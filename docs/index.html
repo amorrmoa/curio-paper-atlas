@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4eb">
+  <meta name="description" content="マニエリスム、図像学、博物誌、錬金術など18概念・43主題で、学術誌の新着論文を自動発見する独立論文アトラス。">
+  <title>奇想論文航路 — CURIO PAPER ATLAS</title>
+  <link rel="stylesheet" href="./assets/site.css">
+  <script src="./assets/site.js" defer></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="wrap head-inner">
+      <a class="logo" href="#top" aria-label="奇想論文航路 トップへ"><span class="logo-symbol">✳</span><span><strong>奇想論文航路</strong><small>CURIO PAPER ATLAS</small></span></a>
+      <nav class="mainnav" aria-label="サイト内の移動"><a href="#discovery">論文航路</a><a href="#atlas">概念の地図</a><a href="#method">蒐集の方法</a></nav>
+      <a class="sister-link" href="https://amorrmoa.github.io/curio-washo-atlas/" target="_blank" rel="noopener noreferrer">和書航路 <span>↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> AN ATLAS OF THE CURIOUS <span class="hero-year">2026—2028 / RESEARCH PAPERS</span></div>
+        <h1 id="hero-heading">まだ知らない知へ、<br><em>論文から辿る。</em></h1>
+        <p class="hero-lead">マニエリスム、驚異の部屋、博物誌、錬金術、錯視、図像学。<br>日本語と英語の学術誌を横断し、知の周縁にある研究を拾い上げる。</p>
+        <div class="hero-actions"><a class="primary-cta" href="#discovery">発掘された論文へ <span aria-hidden="true">↗</span></a><a class="text-cta" href="#atlas">18の概念をたどる <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-footnote"><span class="pulse"></span> <span>初期登録0件。日英の学術誌RSSから自動発見。</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="arch arch-back"></div><div class="arch arch-mid"></div><div class="arch arch-front"></div>
+        <span class="art-sun">✳</span><span class="art-planet">◐</span><span class="art-star">✦</span>
+        <div class="art-a">W</div><div class="art-vertical">ARS / IMAGO / SCIENTIA</div>
+        <div class="art-bottom"><span>PLATE NO. 001</span><span>ARS MIRABILIA</span></div>
+      </div>
+    </section>
+
+    <div class="wrap rule"><span>INDEX OF UNEXPECTED RESEARCH</span><span>知の周縁から、論文をひらく。</span><span>EST. MMXXVI</span></div>
+
+    <section class="stats wrap" aria-label="登録状況">
+      <div class="stat"><strong id="stat-total">0</strong><span>発見した論文 <small>DISCOVERED</small></span></div>
+      <div class="stat"><strong id="stat-concepts">18</strong><span>概念群 <small>CONCEPT FAMILIES</small></span></div>
+      <div class="stat"><strong>43</strong><span>検索主題 <small>SEARCH DIRECTIONS</small></span></div>
+      <div class="stat stat-date"><div class="status-dot"></div><span><strong id="last-update">初回更新前</strong><small id="update-note">定期RSS確認 / WEEKLY DISCOVERY</small></span></div>
+    </section>
+
+    <section class="feature-band wrap" aria-label="このサイトについて">
+      <span class="band-no">01 / EDITORIAL NOTE</span>
+      <p>掲載件数を競うのではなく、<strong>研究の思いがけない接点を探す。</strong> 論題や公開メタデータに基づく候補であり、本文を精読した評価や査読保証ではありません。</p>
+    </section>
+
+    <section class="catalog wrap" id="discovery" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><span class="section-kicker">02 / THE DISCOVERY LOG</span><h2 id="catalog-title">発掘された<em>論文たち。</em></h2></div><p>新しい研究の入り口を、<br>掲載誌と概念から辿る。</p></div>
+      <div class="catalog-layout">
+        <aside class="filters" aria-label="論文の絞り込み">
+          <div class="filter-title"><strong>FILTER / 索引</strong><button type="button" id="reset-filters">すべて解除 ↺</button></div>
+          <label for="q" class="filter-caption">論題・著者・キーワード</label><input id="q" type="search" placeholder="キーワードを入力…" autocomplete="off">
+          <label for="language" class="filter-caption">論文タイトルの言語</label><select id="language"><option value="">日本語・英語すべて</option><option value="ja">日本語</option><option value="en">English</option></select>
+          <label for="concept" class="filter-caption">概念の交差点</label><select id="concept"><option value="">すべての概念</option></select>
+          <label for="year" class="filter-caption">公開年</label><select id="year"><option value="">すべての公開年</option></select>
+          <label for="journal" class="filter-caption">掲載誌</label><select id="journal"><option value="">すべての掲載誌</option></select>
+          <div class="filter-note"><span>✳</span> 日本語11誌・英語3誌の新着RSSを収集。<br>同じ掲載誌からの採用は1回最大3件。</div>
+        </aside>
+        <div class="results">
+          <div class="result-toolbar"><div class="result-number"><strong id="result-count">0</strong> <span>件の論文 / RESULTS</span></div><div class="toolbar-right"><label for="sort" class="sr-only">並び順</label><select id="sort"><option value="discovered">新着順</option><option value="publication">公開年月順</option><option value="score">概念一致度順</option><option value="title">論題順</option></select><button type="button" id="toggle-saved" aria-pressed="false">☆ 保存した論文</button></div></div>
+          <div id="book-grid" class="book-grid" aria-live="polite"></div>
+          <div id="empty-state" class="empty-state" hidden>
+            <div class="empty-art" aria-hidden="true">∅<span>✺</span></div>
+            <span class="empty-eyebrow">NOTHING FOUND — YET</span>
+            <h3 id="empty-title">航路は、まだ白紙です。</h3>
+            <p id="empty-description">最初の論文リストはありません。日本語・英語の学術誌RSSを取得し、条件に合う論文が見つかると、ここに並びます。</p>
+            <a class="empty-link" href="#method">発掘のしくみを見る ↗</a>
+          </div>
+          <div id="loadbar" class="loadbar" hidden><button type="button" id="load-more">さらに論文を表示 ↓</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="atlas-wrap" id="atlas"><div class="wrap"><div class="section-heading"><div><span class="section-kicker">03 / A CABINET OF CONCEPTS</span><h2>奇想の<em>十八景。</em></h2></div><p>洋書版と同じ18の概念を、<br>日英の研究論文へ。</p></div><div id="concept-grid" class="concept-grid"></div></div></section>
+
+    <section class="method wrap" id="method"><div><span class="section-kicker">04 / A NOTE ON THE METHOD</span><h2>知の探索は、<em>続いていく。</em></h2><div class="method-symbol">✳</div></div><div class="method-body"><p>「奇想和書航路」と同じ高山宏的な18の概念群と43の探索主題を、日本語・英語の論文探索へ転用しています。J-STAGEの『美学』『文化資源学』など11誌と、Oxford Academicの <em>Art History</em>・<em>Journal of Design History</em>、Project MUSEの <em>Journal of the History of Ideas</em> の<strong>新着論文RSS</strong>を週に一度確認し、論題や公開メタデータとの一致から候補を抽出します。</p><p>APIキー不要。初期登録は0件です。英文誌の論文でも全文が無料で読めるとは限りません。新着RSSは最新記事だけを配信するため、過去の論文の網羅的検索ではなく、対象誌・配信状況によっては0件の週もあります。学術誌が変われば取得範囲も変わります。「自動発見候補」は推薦や査読の確認を意味しません。</p><p>原文の複製は行わず、論題・著者・掲載誌・年・DOI等の書誌情報から掲載元へリンクします。閲覧やPDFダウンロードの可否は公開元によります。</p><div class="method-links"><a href="https://www.jstage.jst.go.jp/" target="_blank" rel="noopener noreferrer">J-STAGE ↗</a><a href="https://academic.oup.com/" target="_blank" rel="noopener noreferrer">Oxford Academic ↗</a><a href="https://muse.jhu.edu/journal/91" target="_blank" rel="noopener noreferrer">Journal of the History of Ideas ↗</a><a href="https://amorrmoa.github.io/curio-washo-atlas/" target="_blank" rel="noopener noreferrer">姉妹サイト・奇想和書航路 ↗</a><a href="https://amorrmoa.github.io/curio-book-atlas/" target="_blank" rel="noopener noreferrer">奇想洋書航路 ↗</a></div><div class="method-note">書誌情報出典：J-STAGE・Oxford Academic・Project MUSEの新着論文RSS。独立した非公式の編集プロジェクトであり、J-STAGEの運営組織から監修・推薦を受けたサイトではありません。</div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><div><strong>✳ 奇想論文航路</strong><small>CURIO PAPER ATLAS — AN ATLAS OF CURIOUS RESEARCH</small></div><span>「驚異」は、論文の頁にも。</span><a href="#top">PAGE TOP ↑</a></div></footer>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-inner"><button type="button" class="close-dialog" id="close-dialog" aria-label="閉じる">×</button><div id="detail-content"></div></div></dialog>
+<script id="inline-preview" type="application/json">{"papers": [], "meta": {"updated_at": null}, "taxonomy": {"version": "paper-takayama-1.0", "description": "高山宏的な18概念群・43主題を、日本語学術論文の新着情報向けに転用したサイト独自の分類。", "searches_per_day": 6, "results_per_query": 12, "max_new_per_run": 16, "max_new_per_publisher": 2, "min_score": 45, "families": [{"label": "マニエリスム・変身", "category": "美術史・幻想", "core": ["マニエリスム", "アルチンボルド", "変身", "変容", "メタモルフォーゼ", "奇想画", "カプリッチョ"], "bridge": ["ルネサンス", "バロック", "歪曲", "人工自然", "怪奇", "装飾", "異形"], "english_core": ["mannerism", "mannerist", "maniera", "arcimboldo", "metamorphosis", "metamorphic", "capriccio"]}, {"label": "驚異の部屋・蒐集の装置", "category": "博物誌・蒐集", "core": ["驚異の部屋", "ヴンダーカンマー", "クンストカンマー", "珍品陳列室", "博物蒐集"], "bridge": ["蒐集", "収集", "展示", "博物館", "標本", "好奇心", "百科"], "english_core": ["cabinet of curiosities", "wunderkammer", "kunstkammer", "kunstschrank", "chamber of wonders", "curiosity cabinet", "curiosity cabinets"]}, {"label": "博物誌・珍獣・怪物", "category": "博物誌・蒐集", "core": ["博物誌", "怪物図像", "ベスティアリ", "動物寓意譚", "奇獣", "畸形", "怪物誌"], "bridge": ["動物", "植物", "図譜", "自然史", "標本", "幻獣", "分類"], "english_core": ["bestiary", "teratology", "monstrous births", "natural history illustration", "monsters of nature", "natural history collections", "taxidermy"]}, {"label": "光学・錯視・幻灯", "category": "美術史・幻想", "core": ["アナモルフォーズ", "暗箱", "カメラ・オブスクラ", "幻灯", "錯視", "光学玩具", "遠近法"], "bridge": ["視覚", "光学", "投影", "映像装置", "視覚文化", "イリュージョン"], "english_core": ["anamorphosis", "anamorphic", "camera obscura", "magic lantern", "phantasmagoria", "peep show", "peep-show"]}, {"label": "ピクチャレスク・廃墟・庭園", "category": "美術史・幻想", "core": ["ピクチャレスク", "廃墟美学", "ピラネージ", "ボマルツォ", "怪物庭園", "庭園史"], "bridge": ["風景画", "廃墟", "迷宮", "庭園", "景観", "ロマン主義"], "english_core": ["picturesque", "bomarzo", "ruin aesthetics", "ruinous landscapes", "grottos", "grottoes", "garden follies"]}, {"label": "記憶術・百科・結合術", "category": "図像・古版本", "core": ["記憶術", "結合術", "記憶の宮殿", "アタナシウス・キルヒャー", "キルヒャー", "百科全書"], "bridge": ["ルネサンス", "分類", "知識", "アルス・コンビナトリア", "博学"], "english_core": ["ars combinatoria", "combinatorial art", "art of memory", "memory palace", "memory theater", "memory theatre", "ramon llull"]}, {"label": "エンブレム・寓意・図像学", "category": "図像・古版本", "core": ["エンブレム", "エンブレム・ブック", "図像学", "ヒエログリフ", "寓意画", "象徴図像"], "bridge": ["図像", "寓意", "象徴", "紋章", "図解", "初期近代"], "english_core": ["emblem book", "emblem books", "emblemata", "hieroglyphics", "rebus", "iconologia", "iconology"]}, {"label": "観相・解剖・蝋の身体", "category": "人体・蝋・解剖", "core": ["観相学", "人相学", "骨相学", "蝋解剖", "セロプラスティック", "蝋人形", "解剖模型"], "bridge": ["人体", "医史学", "標本", "身体表象", "医学史", "解剖図"], "english_core": ["physiognomy", "physiognomics", "phrenology", "ceroplastics", "ceroplasty", "wax anatomy", "anatomical wax"]}, {"label": "錬金術・魔術・秘教", "category": "魔術・神秘", "core": ["錬金術", "ヘルメス主義", "秘教", "魔術史", "魔術図像", "占術", "占星術"], "bridge": ["神秘思想", "タロット", "宗教史", "ルネサンス", "儀礼", "象徴"], "english_core": ["alchemy", "alchemical", "hermeticism", "hermetism", "hermetic philosophy", "occult sciences", "divination"]}, {"label": "書物・版画・メディア考古学", "category": "図像・古版本", "core": ["古版本", "彩色版画", "木版画", "石版画", "クロモリトグラフ", "挿絵本", "印刷文化"], "bridge": ["出版史", "書物史", "図版", "版画", "写本", "印刷術"], "english_core": ["illustrated books", "illustrated manuscripts", "illuminated manuscripts", "woodcut illustration", "woodcuts", "print culture", "visual print culture"]}, {"label": "奇想建築・迷宮・ピラネージ", "category": "美術史・幻想", "core": ["ピラネージ", "奇想建築", "建築幻想", "迷宮建築", "トロンプ・ルイユ", "だまし絵"], "bridge": ["建築史", "装飾", "廃墟", "空想都市", "図面", "空間"], "english_core": ["piranesi", "carceri", "imaginary prisons", "architectural capriccio", "architectural fantasies", "labyrinthine architecture", "labyrinths"]}, {"label": "見世物・自動機械・人造生命", "category": "美術史・幻想", "core": ["自動人形", "オートマタ", "自動機械", "機械仕掛け", "影絵劇", "見世物史", "人造生命"], "bridge": ["見世物", "演劇", "機械", "人形", "からくり", "スペクタクル"], "english_core": ["automata", "automaton", "mechanical theatre", "mechanical theater", "clockwork figures", "mechanical marvels", "artificial life"]}, {"label": "グロテスク・奇怪・幻想", "category": "美術史・幻想", "core": ["グロテスク", "グロテスキ", "怪奇美術", "心霊写真", "幻想画", "シュルレアリスム"], "bridge": ["奇怪", "異形", "不気味", "怪物", "幻想", "怪異"], "english_core": ["grotesquerie", "grotesques", "grotesque art", "uncanny imagery", "monster imagery", "fantastic art", "fantastical art"]}, {"label": "色彩・共感覚・視覚的快楽", "category": "美術史・幻想", "core": ["色彩論", "色彩学", "共感覚", "色彩文化", "クロマティクス"], "bridge": ["光学", "視覚", "感覚史", "色彩", "美術理論"], "english_core": ["colour theory", "color theory", "chromatics", "chromatic worlds", "chromophobia", "chromophilia", "chromolithography"]}, {"label": "百科展示・視覚科学", "category": "図像・古版本", "core": ["科学図像", "科学図譜", "天体写真", "図解の歴史", "視覚科学", "天文学図譜"], "bridge": ["可視化", "図表", "天文学", "科学機器", "図鑑", "知識"], "english_core": ["scientific illustration", "scientific instruments", "scientific visualization", "visualising knowledge", "visualizing knowledge", "scientific diagrams", "visual epistemology"]}, {"label": "文学の迷宮・ナンセンス", "category": "美術史・幻想", "core": ["ナンセンス文学", "不条理文学", "幻想文学史", "文学の迷宮"], "bridge": ["パラドックス", "遊戯", "言語", "挿絵", "視覚文学"], "english_core": ["literary nonsense", "nonsense literature", "paradoxography", "fantastic literature", "pictorial narrative", "literary labyrinth", "word and image"]}, {"label": "音楽図像・楽器の奇想", "category": "音楽・文化", "core": ["音楽図像", "楽器図譜", "架空の楽器", "機械音楽", "音楽の図像学"], "bridge": ["楽器史", "音楽史", "視覚文化", "装置", "音響"], "english_core": ["musical iconography", "musical diagrams", "imaginary instruments", "mechanical music", "musical automata", "instrument collections", "sound archaeology"]}, {"label": "縮尺・玩具・ミニアチュール", "category": "博物誌・蒐集", "core": ["ミニアチュール", "ドールハウス", "縮尺模型", "ミニチュア", "模型文化"], "bridge": ["玩具", "人形", "縮尺", "収集", "小世界", "建築模型"], "english_core": ["dollhouse", "dollhouses", "miniature worlds", "miniatures", "scale models", "architectural models", "toy theatres"]}], "queries": [{"topic": "マニエリスム・変身", "term": "マニエリスム"}, {"topic": "マニエリスム・変身", "term": "アルチンボルド"}, {"topic": "マニエリスム・変身", "term": "ルネサンス 変身"}, {"topic": "驚異の部屋・蒐集の装置", "term": "驚異の部屋"}, {"topic": "驚異の部屋・蒐集の装置", "term": "ヴンダーカンマー"}, {"topic": "博物誌・珍獣・怪物", "term": "ベスティアリ"}, {"topic": "博物誌・珍獣・怪物", "term": "博物誌 図譜"}, {"topic": "博物誌・珍獣・怪物", "term": "怪物図像"}, {"topic": "光学・錯視・幻灯", "term": "アナモルフォーズ"}, {"topic": "光学・錯視・幻灯", "term": "幻灯 文化史"}, {"topic": "光学・錯視・幻灯", "term": "カメラ・オブスクラ"}, {"topic": "ピクチャレスク・廃墟・庭園", "term": "ピクチャレスク 庭園"}, {"topic": "ピクチャレスク・廃墟・庭園", "term": "ピラネージ 廃墟"}, {"topic": "ピクチャレスク・廃墟・庭園", "term": "ボマルツォ"}, {"topic": "記憶術・百科・結合術", "term": "記憶術 ルネサンス"}, {"topic": "記憶術・百科・結合術", "term": "結合術"}, {"topic": "記憶術・百科・結合術", "term": "キルヒャー"}, {"topic": "エンブレム・寓意・図像学", "term": "エンブレム"}, {"topic": "エンブレム・寓意・図像学", "term": "寓意画 ルネサンス"}, {"topic": "エンブレム・寓意・図像学", "term": "ヒエログリフ"}, {"topic": "観相・解剖・蝋の身体", "term": "観相学"}, {"topic": "観相・解剖・蝋の身体", "term": "蝋解剖"}, {"topic": "観相・解剖・蝋の身体", "term": "解剖模型"}, {"topic": "錬金術・魔術・秘教", "term": "錬金術 図像"}, {"topic": "錬金術・魔術・秘教", "term": "占術 文化史"}, {"topic": "錬金術・魔術・秘教", "term": "ヘルメス主義"}, {"topic": "書物・版画・メディア考古学", "term": "挿絵本 美術"}, {"topic": "書物・版画・メディア考古学", "term": "木版画 中世"}, {"topic": "書物・版画・メディア考古学", "term": "彩色石版画"}, {"topic": "奇想建築・迷宮・ピラネージ", "term": "奇想建築"}, {"topic": "奇想建築・迷宮・ピラネージ", "term": "トロンプ・ルイユ"}, {"topic": "見世物・自動機械・人造生命", "term": "自動人形"}, {"topic": "見世物・自動機械・人造生命", "term": "影絵劇"}, {"topic": "グロテスク・奇怪・幻想", "term": "グロテスク 美術"}, {"topic": "グロテスク・奇怪・幻想", "term": "心霊写真"}, {"topic": "色彩・共感覚・視覚的快楽", "term": "色彩論 美術史"}, {"topic": "色彩・共感覚・視覚的快楽", "term": "共感覚 美術"}, {"topic": "百科展示・視覚科学", "term": "科学図譜"}, {"topic": "百科展示・視覚科学", "term": "天体写真 歴史"}, {"topic": "文学の迷宮・ナンセンス", "term": "ナンセンス文学"}, {"topic": "音楽図像・楽器の奇想", "term": "音楽図像"}, {"topic": "縮尺・玩具・ミニアチュール", "term": "ミニアチュール"}, {"topic": "縮尺・玩具・ミニアチュール", "term": "ドールハウス"}]}}</script>
+</body>
+</html>
