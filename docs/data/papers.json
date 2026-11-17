@@ -1,12 +1,13 @@
 {
   "meta": {
-    "description": "初期登録0件。J-STAGE（日本語）・Oxford Academic・Project MUSE（英語）の新着論文RSSで自動発掘。",
-    "source": "J-STAGE / Oxford Academic / Project MUSE RSS",
-    "updated_at": null,
+    "description": "日本語（J-STAGE）・英語（Oxford Academic／Project MUSE）の学術誌RSSで増やす独立論文アーカイブ。",
+    "updated_at": "2026-11-17T04:39:39+00:00",
     "new_last_run": 0,
-    "sources_ok": 0,
+    "sources_ok": 14,
     "sources_failed": 0,
-    "last_status": "初回更新前",
+    "last_status": "正常",
+    "source": "J-STAGE・Oxford Academic・Project MUSE 公開RSS",
+    "journals_monitored": 14,
     "languages": [
       "ja",
       "en"
