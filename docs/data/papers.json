@@ -1,8 +1,8 @@
 {
   "meta": {
     "description": "日本語J-STAGE RSS・英語Oxford/Project MUSE RSSとCrossref DOI書誌（計50誌）を週次照会する論文アーカイブ。",
-    "updated_at": "2026-11-17T05:04:25+00:00",
-    "new_last_run": 18,
+    "updated_at": "2026-11-17T05:09:02+00:00",
+    "new_last_run": 6,
     "sources_ok": 46,
     "sources_failed": 4,
     "last_status": "一部RSS取得失敗",
@@ -449,6 +449,153 @@
       ],
       "matched_terms": [
         "rebus"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "A Global History of Scientific Instruments",
+      "url": "https://doi.org/10.1163/18253911-bja10192",
+      "authors": [
+        "Simon Werrett"
+      ],
+      "journal": "Nuncius",
+      "published": "2026",
+      "date": "2026-1-19",
+      "doi": "10.1163/18253911-bja10192",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1163/18253911-bja10192",
+      "score": 46,
+      "tags": [
+        "百科展示・視覚科学"
+      ],
+      "matched_terms": [
+        "scientific instruments"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Dorothea Juliana Wallich: Pathways to the Universal Tincture. Collected Alchemical Writings",
+      "url": "https://doi.org/10.1080/00026980.2026.2726092",
+      "authors": [
+        "Ute Frietsch"
+      ],
+      "journal": "Ambix",
+      "published": "2026",
+      "date": "2026-9-16",
+      "doi": "10.1080/00026980.2026.2726092",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1080/00026980.2026.2726092",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemical"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Mediating Alchemical Language across Terminologies and Cultures in Ruland’s Lexicon Alchemiae : A Data-driven Study of Arabic Terms",
+      "url": "https://doi.org/10.1080/00026980.2026.2697142",
+      "authors": [
+        "Sarah Lang",
+        "Farzad Mahootian",
+        "Hazem Lashen"
+      ],
+      "journal": "Ambix",
+      "published": "2026",
+      "date": "2026-7-29",
+      "doi": "10.1080/00026980.2026.2697142",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1080/00026980.2026.2697142",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemical"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Contextual Word Embeddings for Paracelsian Lexicography: Tangled Terminologies and their Origins in Ruland’s Alchemical Dictionary",
+      "url": "https://doi.org/10.1080/00026980.2026.2692190",
+      "authors": [
+        "Vojteˇch Kaše",
+        "Sarah Lang"
+      ],
+      "journal": "Ambix",
+      "published": "2026",
+      "date": "2026-9-4",
+      "doi": "10.1080/00026980.2026.2692190",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1080/00026980.2026.2692190",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemical"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "Literatures of Alchemy in Medieval and Early Modern England, written by Eoin Bentick",
+      "url": "https://doi.org/10.1163/15733823-20240121",
+      "authors": [
+        "Margaret C. Maurer"
+      ],
+      "journal": "Early Science and Medicine",
+      "published": "2024",
+      "date": "2024-12-18",
+      "doi": "10.1163/15733823-20240121",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1163/15733823-20240121",
+      "score": 46,
+      "tags": [
+        "錬金術・魔術・秘教"
+      ],
+      "matched_terms": [
+        "alchemy"
+      ],
+      "discovered_at": "2026-11-17",
+      "source": "Crossref RSS（書誌情報）",
+      "status": "自動発見候補"
+    },
+    {
+      "title": "“Northerners are Strong, Southerners are Timid”: the Notion of Climate in Medieval Physiognomy",
+      "url": "https://doi.org/10.1163/15733823-20240113",
+      "authors": [
+        "Lisa Devriese"
+      ],
+      "journal": "Early Science and Medicine",
+      "published": "2024",
+      "date": "2024-12-18",
+      "doi": "10.1163/15733823-20240113",
+      "language": "en",
+      "provider": "Crossref",
+      "id": "doi:10.1163/15733823-20240113",
+      "score": 46,
+      "tags": [
+        "観相・解剖・蝋の身体"
+      ],
+      "matched_terms": [
+        "physiognomy"
       ],
       "discovered_at": "2026-11-17",
       "source": "Crossref RSS（書誌情報）",
