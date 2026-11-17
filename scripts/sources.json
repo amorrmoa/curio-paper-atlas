@@ -1,5 +1,5 @@
 {
-  "description": "日本語J-STAGE 11誌・英語Oxford Academic 2誌・Project MUSEのJournal of the History of Ideas 1誌の新着論文RSSを週次照会。RSS閲覧は提供元の利用条件に従う。",
+  "description": "奇想論文航路：J-STAGE日本語11誌、Oxford Academic/Project MUSE英語RSS3誌、Crossref DOI書誌36誌、計50誌。RSSが未確認の雑誌にはRSS URLを捏造せず、APIキー不要のCrossrefを週次照会する。",
   "journals": [
     {
       "code": "bigaku",
@@ -82,6 +82,332 @@
       "language": "en",
       "provider": "Project MUSE",
       "note": "MUSEの雑誌別latest_articlesフィード形式とJHI journal ID 91に基づくURL。実取得はGitHub Actions初回実行で要確認。"
+    }
+  ],
+  "crossref_journals": [
+    {
+      "id": "representations",
+      "name": "Representations",
+      "issn": "0734-6018",
+      "language": "en",
+      "topic": "表象研究・思想史",
+      "home": "https://online.ucpress.edu/representations",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "jwci",
+      "name": "Journal of the Warburg and Courtauld Institutes",
+      "issn": "0075-4390",
+      "language": "en",
+      "topic": "図像学・文化史",
+      "home": "https://www.journals.uchicago.edu/toc/jwci/current",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "jhc",
+      "name": "Journal of the History of Collections",
+      "issn": "0954-6650",
+      "language": "en",
+      "topic": "蒐集史",
+      "home": "https://academic.oup.com/jhc",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "wordimage",
+      "name": "Word & Image",
+      "issn": "0266-6286",
+      "language": "en",
+      "topic": "図像と文学",
+      "home": "https://portal.issn.org/resource/ISSN/0266-6286",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "renaissancequarterly",
+      "name": "Renaissance Quarterly",
+      "issn": "0034-4338",
+      "language": "en",
+      "topic": "初期近代",
+      "home": "https://portal.issn.org/resource/ISSN/0034-4338",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "artbulletin",
+      "name": "The Art Bulletin",
+      "issn": "0004-3079",
+      "language": "en",
+      "topic": "美術史",
+      "home": "https://portal.issn.org/resource/ISSN/0004-3079",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "isis",
+      "name": "Isis",
+      "issn": "0021-1753",
+      "language": "en",
+      "topic": "科学史",
+      "home": "https://portal.issn.org/resource/ISSN/0021-1753",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "renaissancestudies",
+      "name": "Renaissance Studies",
+      "issn": "0269-1213",
+      "language": "en",
+      "topic": "ルネサンス文化史",
+      "home": "https://portal.issn.org/resource/ISSN/0269-1213",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "earlymodernhistory",
+      "name": "Journal of Early Modern History",
+      "issn": "1385-3783",
+      "language": "en",
+      "topic": "初期近代史",
+      "home": "https://portal.issn.org/resource/ISSN/1385-3783",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "visualculture",
+      "name": "Journal of Visual Culture",
+      "issn": "1470-4129",
+      "language": "en",
+      "topic": "視覚文化",
+      "home": "https://portal.issn.org/resource/ISSN/1470-4129",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "visualresources",
+      "name": "Visual Resources",
+      "issn": "0197-3762",
+      "language": "en",
+      "topic": "画像史料",
+      "home": "https://portal.issn.org/resource/ISSN/0197-3762",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "historyscience",
+      "name": "History of Science",
+      "issn": "0073-2753",
+      "language": "en",
+      "topic": "科学史",
+      "home": "https://portal.issn.org/resource/ISSN/0073-2753",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "bjhs",
+      "name": "The British Journal for the History of Science",
+      "issn": "0007-0874",
+      "language": "en",
+      "topic": "科学史",
+      "home": "https://portal.issn.org/resource/ISSN/0007-0874",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "shps",
+      "name": "Studies in History and Philosophy of Science",
+      "issn": "0039-3681",
+      "language": "en",
+      "topic": "科学哲学・科学史",
+      "home": "https://portal.issn.org/resource/ISSN/0039-3681",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "earlyscience",
+      "name": "Early Science and Medicine",
+      "issn": "1383-7427",
+      "language": "en",
+      "topic": "初期近代科学・医学史",
+      "home": "https://portal.issn.org/resource/ISSN/1383-7427",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "nuncius",
+      "name": "Nuncius",
+      "issn": "0394-7394",
+      "language": "en",
+      "topic": "科学の物質文化",
+      "home": "https://portal.issn.org/resource/ISSN/0394-7394",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "materialreligion",
+      "name": "Material Religion",
+      "issn": "1743-2200",
+      "language": "en",
+      "topic": "宗教と物質文化",
+      "home": "https://portal.issn.org/resource/ISSN/1743-2200",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "materialculture",
+      "name": "Journal of Material Culture",
+      "issn": "1359-1835",
+      "language": "en",
+      "topic": "物質文化",
+      "home": "https://portal.issn.org/resource/ISSN/1359-1835",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "jmems",
+      "name": "Journal of Medieval and Early Modern Studies",
+      "issn": "1082-9636",
+      "language": "en",
+      "topic": "中世・近世文化",
+      "home": "https://portal.issn.org/resource/ISSN/1082-9636",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "eighteenthcentury",
+      "name": "Eighteenth-Century Studies",
+      "issn": "0013-2586",
+      "language": "en",
+      "topic": "18世紀文化",
+      "home": "https://portal.issn.org/resource/ISSN/0013-2586",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "jemcs",
+      "name": "Journal for Early Modern Cultural Studies",
+      "issn": "1531-0485",
+      "language": "en",
+      "topic": "近世文化研究",
+      "home": "https://portal.issn.org/resource/ISSN/1531-0485",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "modernismmodernity",
+      "name": "Modernism/modernity",
+      "issn": "1071-6068",
+      "language": "en",
+      "topic": "モダニズム・文化史",
+      "home": "https://portal.issn.org/resource/ISSN/1071-6068",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "configurations",
+      "name": "Configurations",
+      "issn": "1063-1801",
+      "language": "en",
+      "topic": "科学・文学・技術史",
+      "home": "https://portal.issn.org/resource/ISSN/1063-1801",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "leonardo",
+      "name": "Leonardo",
+      "issn": "0024-094X",
+      "language": "en",
+      "topic": "芸術・科学・技術",
+      "home": "https://portal.issn.org/resource/ISSN/0024-094X",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "folkloreresearch",
+      "name": "Journal of Folklore Research",
+      "issn": "0737-7037",
+      "language": "en",
+      "topic": "民俗学",
+      "home": "https://portal.issn.org/resource/ISSN/0737-7037",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "magicritual",
+      "name": "Magic, Ritual, and Witchcraft",
+      "issn": "1556-8547",
+      "language": "en",
+      "topic": "魔術・宗教史",
+      "home": "https://www.pennpress.org/journals/journal/magic-ritual-and-witchcraft/",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "aries",
+      "name": "Aries: Journal for the Study of Western Esotericism",
+      "issn": "1567-9896",
+      "language": "en",
+      "topic": "西洋秘教史",
+      "home": "https://portal.issn.org/resource/ISSN/1567-9896",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "historyreligions",
+      "name": "History of Religions",
+      "issn": "0018-2710",
+      "language": "en",
+      "topic": "宗教史",
+      "home": "https://portal.issn.org/resource/ISSN/0018-2710",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "oxfordartjournal",
+      "name": "Oxford Art Journal",
+      "issn": "0142-6540",
+      "language": "en",
+      "topic": "美術史・視覚理論",
+      "home": "https://portal.issn.org/resource/ISSN/0142-6540",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "artjournal",
+      "name": "Art Journal",
+      "issn": "0004-3249",
+      "language": "en",
+      "topic": "美術研究",
+      "home": "https://portal.issn.org/resource/ISSN/0004-3249",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "jsah",
+      "name": "Journal of the Society of Architectural Historians",
+      "issn": "0037-9808",
+      "language": "en",
+      "topic": "建築史",
+      "home": "https://portal.issn.org/resource/ISSN/0037-9808",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "centaurus",
+      "name": "Centaurus",
+      "issn": "0008-8994",
+      "language": "en",
+      "topic": "科学史",
+      "home": "https://portal.issn.org/resource/ISSN/0008-8994",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "ambix",
+      "name": "Ambix",
+      "issn": "0002-6980",
+      "language": "en",
+      "topic": "錬金術・化学史",
+      "home": "https://portal.issn.org/resource/ISSN/0002-6980",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "historyphilosophy",
+      "name": "Journal of the History of Philosophy",
+      "issn": "0022-5053",
+      "language": "en",
+      "topic": "哲学史",
+      "home": "https://portal.issn.org/resource/ISSN/0022-5053",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "visualculturebritain",
+      "name": "Visual Culture in Britain",
+      "issn": "1471-4787",
+      "language": "en",
+      "topic": "英国の視覚文化",
+      "home": "https://portal.issn.org/resource/ISSN/1471-4787",
+      "provider": "Crossref DOI metadata"
+    },
+    {
+      "id": "renref",
+      "name": "Renaissance and Reformation / Renaissance et Réforme",
+      "issn": "0034-429X",
+      "language": "en",
+      "topic": "ルネサンス・宗教改革",
+      "home": "https://jps.library.utoronto.ca/index.php/renref",
+      "provider": "Crossref DOI metadata"
     }
   ]
 }

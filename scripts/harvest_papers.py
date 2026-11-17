@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Curio Paper Atlas: poll J-STAGE, Oxford Academic and Project MUSE public article RSS without keys."""
+"""Curio Paper Atlas: monitor 50 journals via public RSS and keyless Crossref DOI metadata."""
 from __future__ import annotations
 import argparse
 import datetime as dt
@@ -23,6 +23,10 @@ TAXONOMY = ROOT / 'scripts/takayama_ja_taxonomy.json'
 SOURCES = ROOT / 'scripts/sources.json'
 USER_AGENT = 'CurioPaperAtlas/1.0 (noncommercial scholarly RSS reader; weekly poll; GitHub Pages)'
 MAX_BYTES = 2_000_000
+MAX_CROSSREF_BYTES = 6_000_000
+CROSSREF_API = 'https://api.crossref.org'
+CROSSREF_MIN_DELAY = 1.7  # Public limit: no more than 5 req/s; use sequential, courteous requests.
+CROSSREF_ROWS = 75
 MAX_PER_JOURNAL = 3
 MAX_PER_RUN = 18
 MIN_ENGLISH_PER_RUN = 4  # reserve up to four places for relevant English papers when available
@@ -234,6 +238,84 @@ def fetch_external_feed(url, retries=1):
     raise RuntimeError('Unreachable retry state')
 
 
+
+def parse_crossref_items(items, journal):
+    """Convert DOI metadata to our existing schema; never fabricate article URLs."""
+    papers=[]
+    for rec in items:
+        if not isinstance(rec, dict) or rec.get('type') != 'journal-article':
+            continue
+        titles=rec.get('title') or []
+        title=clean(titles[0] if isinstance(titles,list) and titles else '')
+        if not title or BAD_TITLE.search(title) or BAD_CONTENT.search(title):
+            continue
+        # If publisher specifies a language other than English, respect it.
+        lang=str(rec.get('language') or '').lower()
+        if lang and lang not in ('en','eng','english'):
+            continue
+        # Avoid a French/Italian record when Crossref omitted language metadata.
+        if detect_title_language(title)!='en':
+            continue
+        doi=str(rec.get('DOI') or '').strip()
+        if not re.match(r'^10\.\d{4,9}/\S+$', doi, flags=re.I):
+            continue
+        dateparts=[]
+        for key in ('published-online','published','published-print','issued','created'):
+            dateparts=(rec.get(key) or {}).get('date-parts') or []
+            if dateparts: break
+        dateparts=dateparts[0] if dateparts and isinstance(dateparts[0],list) else []
+        year=int(dateparts[0]) if dateparts else None
+        if year and year<MIN_YEAR: continue
+        authors=[]
+        for a in rec.get('author') or []:
+            name=' '.join((str(a.get('given') or '').strip(),str(a.get('family') or '').strip())).strip()
+            if name:authors.append(name)
+        abstract=clean(rec.get('abstract') or '')[:2000]
+        link='https://doi.org/'+urllib.parse.quote(doi,safe="/-._;()")
+        papers.append({
+            'title':title, 'url':link, 'authors':authors[:8], 'journal':journal['name'],
+            'published':str(year or ''),'date':'-'.join(map(str,dateparts[:3])),
+            'doi':doi,'language':'en','provider':'Crossref', '_abstract':abstract
+        })
+    return papers
+
+
+def fetch_crossref_journal(journal, retries=2):
+    """Use a single recent-work DOI query per ISSN; never crawl publisher HTML."""
+    issn=journal['issn']
+    if not re.fullmatch(r'\d{4}-[\d]{3}[\dX]',issn):
+        raise ValueError('Invalid ISSN syntax')
+    params={
+        'filter':'from-pub-date:2024-01-01,type:journal-article',
+        'sort':'published', 'order':'desc', 'rows':CROSSREF_ROWS
+    }
+    url=CROSSREF_API+'/journals/'+issn+'/works?'+urllib.parse.urlencode(params)
+    for attempt in range(retries+1):
+        try:
+            req=urllib.request.Request(url,headers={
+                'User-Agent':'CurioPaperAtlas/2.0 (+https://amorrmoa.github.io/curio-paper-atlas/; weekly DOI bibliography)',
+                'Accept':'application/json'
+            })
+            with urllib.request.urlopen(req,timeout=35) as response:
+                final=urllib.parse.urlparse(response.geturl())
+                if final.scheme!='https' or final.hostname!='api.crossref.org':
+                    raise ValueError('Unexpected Crossref redirect')
+                raw=response.read(MAX_CROSSREF_BYTES+1)
+                if len(raw)>MAX_CROSSREF_BYTES: raise ValueError('Crossref response too large')
+                doc=json.loads(raw)
+                items=(doc.get('message') or {}).get('items')
+                if not isinstance(items,list): raise ValueError('Crossref message.items missing')
+                return items
+        except urllib.error.HTTPError as ex:
+            if ex.code in (429,500,502,503,504) and attempt<retries:
+                try: delay=int(ex.headers.get('Retry-After','6'))
+                except (TypeError,ValueError):delay=6
+                delay=min(45,max(5,delay))
+                print(f'  Crossref HTTP {ex.code}: retrying after {delay}s',file=sys.stderr)
+                time.sleep(delay);continue
+            raise
+    raise RuntimeError('Unreachable Crossref retry state')
+
 def run(dry_run=False, subset=None):
     conf=json.loads(SOURCES.read_text(encoding='utf-8'))
     tax=json.loads(TAXONOMY.read_text(encoding='utf-8'))
@@ -242,9 +324,11 @@ def run(dry_run=False, subset=None):
     entries=[]; ok=0; failed=[]
     journals=conf['journals']
     english_feeds=conf.get('english_feeds',[])
+    crossref_journals=conf.get('crossref_journals',[])
     if subset:
         journals=[j for j in journals if j['code'] in subset]
         english_feeds=[f for f in english_feeds if f['id'] in subset]
+        crossref_journals=[j for j in crossref_journals if j['id'] in subset]
     for i, j in enumerate(journals):
         code=j['code']
         print(f'[{i+1}/{len(journals)}] {j["name"]} ({code})',flush=True)
@@ -267,8 +351,21 @@ def run(dry_run=False, subset=None):
         except (OSError,ET.ParseError,ValueError) as ex:
             print(f'  WARN: {type(ex).__name__}: {ex}',file=sys.stderr)
             failed.append(f['id'])
-        if not dry_run and i<len(english_feeds)-1:time.sleep(1.5)
-    total_sources=len(journals)+len(english_feeds)
+        if not dry_run and (i<len(english_feeds)-1 or crossref_journals):time.sleep(1.5)
+    crossref_ok=0
+    for i, journal in enumerate(crossref_journals):
+        print(f'[DOI {i+1}/{len(crossref_journals)}] {journal["name"]} (ISSN {journal["issn"]})',flush=True)
+        try:
+            items=fetch_crossref_journal(journal)
+            parsed=parse_crossref_items(items,journal)
+            print(f'  Crossref article records: {len(parsed)}',flush=True)
+            entries.extend(parsed);ok+=1;crossref_ok+=1
+        except (OSError,ValueError,TypeError,json.JSONDecodeError) as ex:
+            print(f'  WARN: {type(ex).__name__}: {ex}',file=sys.stderr)
+            failed.append(journal['id'])
+        # A public endpoint is not unlimited. Never send concurrent queries.
+        if i<len(crossref_journals)-1:time.sleep(CROSSREF_MIN_DELAY)
+    total_sources=len(journals)+len(english_feeds)+len(crossref_journals)
     if ok==0:
         raise RuntimeError('Every RSS feed failed. Catalogue unchanged; check sources and network.')
     selected=[]
@@ -280,15 +377,15 @@ def run(dry_run=False, subset=None):
         selected.append(doc)
     current=data.get('papers',[])
     updated,added=merge(current,selected)
-    print(f'Feeds OK: {ok}/{total_sources}; candidate entries: {len(entries)}; topical matches: {len(selected)}; newly added: {len(added)}')
+    print(f'Sources OK: {ok}/{total_sources} (Crossref {crossref_ok}/{len(crossref_journals)}); candidate entries: {len(entries)}; topical matches: {len(selected)}; newly added: {len(added)}')
     if dry_run:
         return {'feeds_ok':ok,'feed_failed':failed,'new':len(added),'sample_titles':[p['title'] for p in added[:5]]}
     data['papers']=updated
     data['meta']={
-        'description':'日本語（J-STAGE）・英語（Oxford Academic／Project MUSE）の学術誌RSSで増やす独立論文アーカイブ。',
+        'description':'日本語J-STAGE RSS・英語Oxford/Project MUSE RSSとCrossref DOI書誌（計50誌）を週次照会する論文アーカイブ。',
         'updated_at':today,'new_last_run':len(added),'sources_ok':ok,'sources_failed':len(failed),
         'last_status':'一部RSS取得失敗' if failed else '正常',
-        'source':'J-STAGE・Oxford Academic・Project MUSE 公開RSS', 'journals_monitored':total_sources, 'languages':['ja','en']
+        'source':'J-STAGE・Oxford Academic・Project MUSE RSS ／ Crossref DOI metadata', 'journals_monitored':total_sources, 'crossref_sources_ok':crossref_ok, 'languages':['ja','en']
     }
     DATA.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     return {'feeds_ok':ok,'feed_failed':failed,'new':len(added)}
